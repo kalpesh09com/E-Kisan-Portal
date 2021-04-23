@@ -1,0 +1,17 @@
+.needs-validation .form-control {
+    min-height: 40px;
+    border-radius: 0px;
+    border: 1px solid #e8e8e8;
+    box-shadow: none !important;
+    font-size: 14px;
+}
+
+.input-group
+{
+    margin-left: 200px;
+
+}
+.name
+{
+    margin-left: 201px;
+}

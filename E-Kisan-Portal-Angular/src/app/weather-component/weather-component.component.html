@@ -1,0 +1,51 @@
+<div class="mainweather">
+    <app-header></app-header>
+    <h1 style="color:white; position: absolute; top: 40%; left: 30px; font-size: 35px;">
+        Check Here Your City <br> Current Weather<br>
+        <i class="fas fa-arrow-alt-circle-right"></i>
+    </h1>
+
+    <div id="divWeatherMain" style="margin-top: 30px;">
+
+        <div *ngIf="WeatherData.isDay" class="weatherWidgetRow">
+            <i class="fas fa-3x fa-sun sun"></i>
+        </div>
+        <div *ngIf="!WeatherData.isDay" class="weatherWidgetRow">
+            <i class="fas fa-3x fa-moon moon"></i>
+        </div>
+        <div class="weatherWidgetRow cloudDiv">
+            <i class="fas fa-cloud fa-3x cloud"></i>
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 35px;margin-top: 5px;">{{WeatherData.temp_celcius}}°</div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">{{WeatherData.temp_min}}° / {{WeatherData.temp_max}}°
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like: {{WeatherData.temp_feels_like}}°</div>
+        <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{WeatherData.name}}</div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{WeatherData.main.humidity}}%</div>
+    </div>
+
+    <div>
+        <form [formGroup]="weatherform" (ngSubmit)="checkWeather()">
+            <table class="table table-bordered bg-light" style="width: 500px; 
+            height: 200px; margin-left: 35%; font-size: 20px;">
+                <td>
+                    <div>
+                        <label><b> Enter City Name </b></label>
+                        <input class="form-control" type="text" style="font-size: 18px;"
+                            placeholder="Enter Your City Name" formControlName="city" required>
+                    </div>
+                </td>
+                <tr>
+                    <td> <button type="submit" style="border-radius: 50px; font-size: 18px;"
+                            class="btn btn-dark btn-lg btn-block">Check Weather </button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+
+</div>
+
+
+<app-footer></app-footer>

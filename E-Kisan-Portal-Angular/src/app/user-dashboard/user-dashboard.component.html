@@ -1,0 +1,41 @@
+<div style="width: 100%; height: 71px;">
+    <h1 class="text-center" style="padding-top: 20px; color: #b0b435;"><u>User Dashboard</u></h1>
+</div> 
+<div class="card container" style="border:none;">
+    <table class="table table-striped table-hover" style="margin:20px; margin-top: 42px;">
+        <thead class="h2" style="color:#b0b435;">
+            <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Adhar Number</th>
+                <th>Password</th>
+                <th>Country</th>
+                <th>Status</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of user">
+                <td>{{u.name}}</td>
+                <td>{{u.phoneNumber}}</td>
+                <td>{{u.adharNumber}}</td>
+                <td>{{u.password}}</td>
+                <td>{{u.country}}</td>
+                <td>{{u.status}}</td>
+                <td> <img src="../../assets/Image/{{u.image}}" alt="User Profile Pic" height="60px" width="60px"> </td>
+
+
+                <td><a class="btn btn-lg" [routerLink]="['/updateuser',u.id]"> Edit Data </a> &nbsp;&nbsp;
+                <a class="btn btn-lg" [routerLink]="['/viewuser',u.id]">View User </a> &nbsp;&nbsp;
+                <a class="btn btn-lg" style="color: white;" (click)="delete(u.id)"> Delete User </a> </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="submit" [routerLink]="['/adminportal']" class="btn btn-lg btn-block"
+                    style="color: white; background-color: black; border-radius: 0px;">Back</button>
+
+
+
+</div>

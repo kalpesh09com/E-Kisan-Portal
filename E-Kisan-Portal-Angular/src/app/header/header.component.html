@@ -1,0 +1,66 @@
+<div style="height: 50px; color:white; font-size: 15px; padding: 10px; width: 100%; background-color: black;"
+    class="top">
+    <span>Call Us On: +91 07105 687148  </span>
+    <h1 style="color:white;text-align: center;margin-top:-20px">E-Kisan Portal</h1>
+  
+</div>
+
+<!-- Start Main Top -->
+<header class="main-header">
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+        <div class="container">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"
+                    aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a  href="#" class="navbar-brand"><img src="../../assets/Image/logo3.jpg" class="logo" alt=""></a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="nav-item active"><a class="nav-link" routerLink="/">Home</a></li>
+                    
+                    
+                    <li><a class="nav-link" routerLink="/news">News</a></li>
+
+                    <li><a class="nav-link" routerLink="/weather">Weather</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="aboutus">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus">Contact Us</a></li>
+
+                    <li><a *ngIf="!loginservice.isUserLogin()" class="nav-link" routerLink="/login"><span
+                        class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+                    <li><a *ngIf="!loginservice.isUserLogin()" class="nav-link" routerLink="/register"><span
+                        class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+
+
+                    <li><a *ngIf="loginservice.isUserLogin()" routerLink="/userprofile"><span
+                                class="glyphicon glyphicon-user"></span> {{user.name}}</a></li>
+
+                    
+                        <li class="side-menu">
+                            <a *ngIf="loginservice.isUserLogin()" href="/myCart">
+                                <span class="fa fa-shopping-bag"></span>
+                                
+                                My Cart </a>
+                           
+                        </li>
+                   
+                    <li><a *ngIf="loginservice.isUserLogin()" class="nav-link" routerLink="/logout"><span
+                                class="glyphicon glyphicon-user"></span> LogOut</a></li>
+                  
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- End Navigation -->
+</header>
+<!-- End Main Top -->

@@ -1,0 +1,191 @@
+<app-header></app-header>
+
+
+
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Register Here</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+
+
+
+
+
+<div class="contact-box-main">
+    <div class="container" style="margin-left:300px;">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12">
+                <div class="contact-form-right">
+                    <form id="contactForm" [formGroup]="form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label><b> Name </b></label>
+                                    <input type="text" class="form-control" placeholder="Enter your name"
+                                        formControlName="name" required data-error="Please enter your name">
+                                        <span class="error" *ngIf = "form.get('name').invalid && form.get('name').touched">Please enter name</span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> <b>Email </b></label>
+                                    <input type="email" placeholder="Your Password" class="form-control"
+                                        placeholder="example@gmail.com" formControlName="emailId" required
+                                        data-error="Please enter your email">
+                                        <span class="error" *ngIf = "form.get('emailId').invalid && form.get('emailId').touched">Please enter valid Email-id</span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label><b> Phone Number </b></label>
+                                    <input type="text" class="form-control" placeholder="Your Phone Number"
+                                        formControlName="phoneNumber" required
+                                        data-error="Please enter your Phone NUmber">
+                                        <span class="error" *ngIf = "form.get('phoneNumber').invalid && form.get('phoneNumber').touched">Please enter phone number</span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> <b>Address </b></label>
+                                    <input type="text" placeholder="Your Address"  class="form-control"
+                                         formControlName="address" required
+                                        data-error="Please enter your Address">
+                                        <span class="error" *ngIf = "form.get('address').invalid && form.get('address').touched">Please enter address</span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label><b> Pin Code </b></label>
+                                    <input type="number" class="form-control" placeholder="Your Pincode"
+                                        formControlName="pincode" required data-error="Please enter your Pincode">
+                                        <span class="error" *ngIf = "form.get('pincode').invalid && form.get('pincode').touched">Please enter valid pincode</span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> <b>State </b></label>
+                                    <input type="text" placeholder="Your State" class="form-control"
+                                        formControlName="state" required data-error="Please enter your State">
+                                        <span class="error" *ngIf = "form.get('state').invalid && form.get('state').touched">Please enter state</span>
+                                        <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label><b> City </b></label>
+                                    <input type="text" class="form-control" placeholder="Your City"
+                                        formControlName="city" required data-error="Please enter your city">
+                                        <span class="error" *ngIf = "form.get('city').invalid && form.get('city').touched">Please enter city</span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> <b>Country </b></label>
+                                    <input type="text" placeholder="Your City" class="form-control"
+                                        formControlName="country" required data-error="Please enter your country">
+                                        <span class="error" *ngIf = "form.get('country').invalid && form.get('country').touched">Please enter country</span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label><b> Adhar Number </b></label>
+                                    <input type="text" class="form-control" placeholder="Your Adhar Number"
+                                        formControlName="adharNumber" required
+                                        data-error="Please enter your Adhar Number">
+                                        <span class="error" *ngIf = "form.get('adharNumber').invalid && form.get('adharNumber').touched">Please enter adharNumber</span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> <b>DOB</b></label>
+                                    <input type="date" class="form-control" formControlName="dob" required
+                                        data-error="Please enter your DOB">
+                                        <span class="error" *ngIf = "form.get('dob').invalid && form.get('dob').touched">Please enter date of birth</span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label><b> Password </b></label>
+                                    <input type="text" class="form-control" placeholder="Enter your Password"
+                                        formControlName="password" required data-error="Please  Password">
+                                        <span class="error" *ngIf = "form.get('password').invalid && form.get('password').touched">Please enter password</span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label><b>Confirm Password </b></label>
+                                    <input type="text" class="form-control" placeholder="Confirm your Password"
+                                        formControlName="confirmpassword" required data-error="Please Password">
+                                        <span class="error" *ngIf = "form.get('confirmpassword').invalid && form.get('confirmpassword').touched">Please confirm password</span>
+                                        <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> <b>RollId </b></label>
+                                    <input type="number" class="form-control" formControlName="roleId" required
+                                        data-error="Please enter your role Id">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div> -->
+
+                            <!-- <div class="col-md-12">
+                                <div class="form-group">
+                                    <label><b> Status </b></label>
+                                    <input type="text" class="form-control" formControlName="status" required
+                                        data-error="Please enter your status">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div> -->
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> <b>Image </b></label>
+                                    <input type="file" class="form-control" (change)="onFileChanged($event)"
+                                        data-error="Please enter your Image">
+                                        
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button type="Submit" class="btn btn-success" style="margin-bottom:20px;"
+                                        (click)="onSubmit()">Submit</button> &nbsp;&nbsp;&nbsp;
+                                    <button type="reset" class="btn btn-danger" style="margin-bottom:20px;">Reset
+                                        Form</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

@@ -1,0 +1,35 @@
+<div style="width: 100%; height: 71px; background-color:black; ">
+  <h1 class="text-center" style="padding-top: 20px;color: #b0b435;">Product Dashboard </h1>
+</div> 
+<div class="card container" style="border:none;">
+  <table  class="table table-hover" style="margin-top: 42px; ">
+    <thead class="table-head h2"> 
+      <tr>
+        <th>Image</th>
+        <th>Product Names</th>
+        <th>Product Brands</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of product">
+        <td><img src="../../assets/Image/{{i.image}}" alt="{{i.image}}" class="card-img-top" 
+         style="cursor:pointer;"></td>
+          <td><b>Product Name :</b> {{i.prodName}}</td>
+          <td><b>Product Brand :</b> {{i.prodBrand}}</td>
+          <td>
+              <p class="info"><b>Price :</b> &#x20b9; {{i.price}}</p>
+              <p class="info"><b>Offer Price:</b> &#x20b9; {{i.offerPrice}}</p>
+          </td>
+          <td>
+            <button type="button" [routerLink]="['/updateProductById',i.id]" class="btn btn-lg ">Edit</button>&nbsp;
+            <button type="button" [routerLink]="['/productById',i.id]" class=" btn btn-lg ">Details</button>&nbsp;
+            <button type="button" [routerLink]="['/deleteProductById',i.id]" class=" btn btn-lg ">Remove</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+  <a class="form-control" style="margin-left: 200px ; padding: 20px;" href="" class="btn btn-lg btn-info button" [routerLink]="['/adminportal']">Back</a>
+  
+ </div>

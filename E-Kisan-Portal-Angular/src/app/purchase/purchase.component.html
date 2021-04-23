@@ -1,0 +1,202 @@
+<app-header></app-header>
+
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Purchase</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+
+<!-- Start Cart  -->
+<div class="cart-box-main">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-6 col-lg-6 mb-3">
+                <div class="checkout-address">
+                    <div class="title-left">
+                        <h3>Billing address</h3>
+                    </div>
+                    <form [formGroup]="purchaseForm" class="needs-validation" novalidate>
+
+                        <div class="mb-3">
+                            <label for="username">Customer Name * </label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" formControlName="userName" placeholder=""
+                                    required>
+                                 
+                                    <span class="error" *ngIf = "purchaseForm.get('userName').invalid && purchaseForm.get('userName').touched">Please enter name</span>
+                           
+                                <div class="invalid-feedback" style="width: 100%;"> Your username is required. </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="username">Phone No * </label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" formControlName="phoneno" placeholder=""
+                                    required>
+                                    <span class="error" *ngIf = "purchaseForm.get('phoneno').invalid && purchaseForm.get('phoneno').touched">Please enter phone number</span>
+                          
+                                <div class="invalid-feedback" style="width: 100%;"> Your Phone No is required. </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address">Address *</label>
+                            <input type="text" class="form-control" formControlName="address" placeholder="" required>
+                            <div class="invalid-feedback"> Please enter your shipping address. </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address">Quantity *</label>
+                            <input type="text" class="form-control" formControlName="quantity" placeholder=""
+                                required>
+                            <div class="invalid-feedback"> Please enter your quantity. </div>
+                        </div>
+
+                        <!-- <div class="mb-3">
+                            <label for="address">Order Date *</label>
+                            <input type="date" class="form-control" formControlName="orderDate" placeholder="" required>
+                            <div class="invalid-feedback"> Please enter Order Date. </div>
+                        </div> -->
+
+                        <!-- <div class="col-md-5 mb-3">
+                            <label for="country">Country *</label>
+                            <input type="text" class="form-control" formControlName="country" placeholder="" required>
+                            <div class="invalid-feedback"> Please select a valid country. </div>
+                        </div> -->
+                        <div class="col-md-4 mb-3">
+                            <label for="state">Country *</label>
+                            <input type="text" class="form-control" formControlName="country" placeholder="" required>
+                            <div class="invalid-feedback"> Please provide a valid state. </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="state">State *</label>
+                            <input type="text" class="form-control" formControlName="state" placeholder="" required>
+                            <div class="invalid-feedback"> Please provide a valid state. </div>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <label for="state">City *</label>
+                            <input type="text" class="form-control" formControlName="city" placeholder="" required>
+                            <div class="invalid-feedback"> Please provide a valid City. </div>
+                        </div>
+
+                        <div class="col-3 mb-3">
+                            <label for="zip">Zip *</label>
+                            <input type="text" class="form-control" formControlName="zip" placeholder="" required>
+                            <div class="invalid-feedback"> Zip code required. </div>
+                        </div>
+
+                        <hr class="mb-4">
+
+                        <div class="title"> <span>Payment</span> </div>
+                        <div class="d-block my-3">
+                            <div class="custom-control custom-radio">
+                                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input"
+                                    checked required>
+                                <label class="custom-control-label" for="credit">Credit card</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input"
+                                    required>
+                                <label class="custom-control-label" for="debit">Debit card</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input"
+                                    required>
+                                <label class="custom-control-label" for="paypal">Paypal</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="cc-name">Name on card</label>
+                                <input type="text" class="form-control" id="cc-name" placeholder="" required> <small
+                                    class="text-muted">Full name as displayed on card</small>
+                                <div class="invalid-feedback"> Name on card is required </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="cc-number">Credit card number</label>
+                                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                                <div class="invalid-feedback"> Credit card number is required </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <label for="cc-expiration">Expiration</label>
+                                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                                <div class="invalid-feedback"> Expiration date required </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="cc-expiration">CVV</label>
+                                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                                <div class="invalid-feedback"> Security code required </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="payment-icon">
+                                    <ul>
+                                        <li><img class="img-fluid" src="../../assets/Image/payment-icon/1.png" alt="">
+                                        </li>
+                                        <li><img class="img-fluid" src="../../assets/Image/payment-icon/2.png" alt="">
+                                        </li>
+                                        <li><img class="img-fluid" src="../../assets/Image/payment-icon/3.png" alt="">
+                                        </li>
+                                        <li><img class="img-fluid" src="../../assets/Image/payment-icon/5.png" alt="">
+                                        </li>
+                                        <li><img class="img-fluid" src="../../assets/Image/payment-icon/7.png" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mb-1">
+                        <div class="order-box">
+                            <div class="title-left">
+                                <h3>Your order</h3>
+                            </div>
+                            <div class="d-flex">
+                                <div class="font-weight-bold">Product</div>
+                                <div class="ml-auto font-weight-bold">Total</div>
+                            </div>
+                            <hr class="my-1">
+                            <div class="d-flex">
+                                <h4>Price</h4>
+                                <div class="ml-auto font-weight-bold"> {{product.price}} </div>
+                            </div>
+                            <div class="d-flex">
+                                <h4>Offer Price</h4>
+                                <div class="ml-auto font-weight-bold"> {{product.offerPrice}} </div>
+                            </div>
+                            <hr class="my-1">
+                            <div class="d-flex gr-total">
+                                <h5>Grand Total</h5>
+                                <div class="ml-auto font-weight-bold"> {{quantity * product.offerPrice}}</div>
+                            </div>
+                            <hr>
+                        </div>
+
+                        <div>
+                            <button class="form-control" style="margin-right:2%;" type="submit" (click)="onSubmit()"
+                                class="btn btn-lg btn-success">Place Order</button>
+                            <button class="form-control" style="margin-right:2%;" type="reset"
+                                class="btn btn-lg btn-info">Clear</button>
+                            <button class="form-control" type="reset" [routerLink]="['/']"
+                                class="btn btn-lg btn-danger">Cancel</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

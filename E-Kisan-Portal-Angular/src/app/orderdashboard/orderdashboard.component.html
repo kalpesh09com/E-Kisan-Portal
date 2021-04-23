@@ -1,0 +1,44 @@
+<div style="width: 100%; height: 71px;">
+  <h1 class="text-center" style="padding-top: 20px; color:  #b0b435;"><u>Order Dashboard </u></h1>
+</div>
+ 
+<br>
+  
+  <div class="card container" style="border:none;">
+    <table class="table table-hover" style="margin:20px; margin-top: 42px;">
+      <thead class="h2" style="color: #b0b435;"> 
+        <tr>
+          <th>User Id</th>
+          <th>User Name</th>
+          <th>Order ID</th>
+          <th>Product Id</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let o of order">
+            <td>{{o.userId}}</td>
+            <td>{{o.userName}}</td>
+            <td>{{o.orderId}}</td>
+            <td> {{o.productId}}</td>
+            <td>
+                <button type="button" [routerLink]="['/getOrderDataByuserId',o.orderId]" class="btn">Order Details</button>&nbsp;
+                <button type="button" [routerLink]="['/updateOrderStatus',o.orderId]" class="btn">Update Details</button>&nbsp;
+            </td>
+        </tr>
+      </tbody>
+    </table>    
+   </div>
+
+   
+   <button  [routerLink]="['/adminportal']" class="btn btn-block" 
+   style="color: white; background-color: black;width:200px ;margin-left: 450px; ">Back</button>
+
+   
+
+
+
+
+
+
+

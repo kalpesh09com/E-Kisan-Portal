@@ -1,0 +1,80 @@
+<app-header></app-header>
+
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Product Detail</h2>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+
+<!-- Start Shop Detail  -->
+<div class="shop-detail-box-main">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xl-5 col-lg-5 col-md-6">
+
+                <img src="../../assets/Image/{{product.image}}" height="300" width="80%">
+
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-6">
+                <div class="single-product-details">
+                    <h5>{{product.prodName}}</h5>
+                    <h6 style="font-size: 18px;">Price:1 Rs. {{product.price}}</h6>
+
+                    <h6 style="font-size: 18px;">Offer Price: Rs. {{product.offerPrice}}</h6>
+                    <h6 style="font-size: 18px;">Brand: {{product.prodBrand}}</h6>
+                    <!-- <p class="available-stock"><span> More than 20 available / <a href="#">8 sold </a></span><p> -->
+                    <h6 style="font-size: 18px;">Description:</h6>
+                    <p>{{product.prodDescription}} </p>
+
+
+                    <!-- specify ur action here on form and buy now button is submit btn-->
+                    <form [formGroup]="form">
+                        <ul>
+                            <li>
+                                <div class="form-group quantity-box">
+                                    <label class="control-label">Quantity</label>
+                                    <input class="form-control" formControlName="quantity" value="0" min="0" max="20"
+                                        type="number">
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div>
+                            <button [routerLink]="['/purchase',product.id]" (click)="getQnt()" type="submit"
+                                style="font-size: 20px;" class="btn btn-warning">Buy
+                                Now</button>&nbsp;
+                            <a (click)="saveInMyCart(product.id,product.prodName,product.price,product.image)"
+                                style="font-size: 20px;" class="btn btn-warning">Add to Cart</a>&nbsp;
+                            <a [routerLink]="['']" style="font-size: 20px; background-color: black; color: white;"
+                                class="btn btn-warning">Go to Home</a>
+                        </div>
+                    </form>
+
+                    <!-- ********DANGER!!!!! DONT REMOVE BELOW CODE THOUGH IT IS COMMENT********** -->
+                    <!-- <div class="price-box-bar">
+                        <div>
+                            <a class="btn hvr-hover"  href="#">Buy New</a>
+                            <a class="btn hvr-hover"  href="#">Add to cart</a>
+                        </div>
+                    </div> -->
+
+                    <div class="add-to-btn">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Cart -->
+
+<app-footer></app-footer>

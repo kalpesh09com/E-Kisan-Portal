@@ -1,0 +1,24 @@
+.card-img-top
+{
+    height: 50px;
+    width: 60px;
+}
+/* rgb(219, 219, 43 */
+.btn
+{
+    border-radius: 0px; 
+    background-color:black; 
+    color:white; 
+    border-color:black;
+
+}
+.table-head
+{
+    color: #b0b435;
+}
+
+div{
+
+    font-size:12px;
+
+}

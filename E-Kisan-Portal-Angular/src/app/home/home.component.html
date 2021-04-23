@@ -1,0 +1,103 @@
+<app-header></app-header>
+
+
+<div class="back">
+  <div style=" width: 100%;" class="container-fluid">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="../../assets/Image/banner-01.jpg" alt="Los Angeles" style="width:100%; height: 500px;">
+        </div>
+
+        <div class="item">
+          <img src="../../assets/Image/banner-02.jpg" alt="Chicago" style="width:100%; height: 500px;">
+        </div>
+
+        <div class="item">
+          <img src="../../assets/Image/banner-03.jpg" alt="New york" style="width:100%; height: 500px;">
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Start Categories  -->
+
+  <div class="categories-shop">
+    <h1 style="padding-left: 9%; padding-bottom: 20px; font-size: 30px; color: green;">Our Products</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="shop-cat-box">
+            <img class="img-fluid" style="height: 240px;" src="../../assets/Image/categories_img_01.jpg" alt="" />
+            <a class="btn hvr-hover" href="#products-box">Seeds</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="shop-cat-box">
+            <img class="img-fluid" src="../../assets/Image/categories_img_02.jpg" alt="" />
+            <a class="btn hvr-hover" href="#products-box">Farming Instrument</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="shop-cat-box">
+            <img class="img-fluid" src="../../assets/Image/categories_img_03.jpg" alt="" />
+            <a class="btn hvr-hover" href="#products-box">Fertilizer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- back div end -->
+<!-- End Categories -->
+
+<h1 style="padding-left: 9%; padding-bottom: 20px; font-size: 30px; color: green;">Choose Products</h1>
+<div class="products-box" id="products-box">
+  <div class="container">
+    <div class="row special-list">
+
+      <div class="col-lg-3 special-grid top-featured" *ngFor="let p of product">
+        <div class="products-single fix">
+          <div class="box-img-hover">
+            <div class="type-lb">
+              <p class="new">New</p>
+
+            </div>
+            <img src="../../assets/Image/{{p.image}}" style="height: 250px;" class="img-fluid" alt="Image">
+
+            <div class="mask-icon">
+              <ul>
+                <li><a [routerLink]="['/viewProductById',p.id]" data-toggle="tooltip" data-placement="right"
+                    title="View"><i class="fa fa-eye"></i></a></li>
+
+              </ul>
+              <a class="cart" [routerLink]="['/viewProductById',p.id]">Add to Cart</a>
+            </div>
+          </div>
+          <div class="why-text">
+            <h4>Product Name: {{p.prodName}}</h4>
+            <h5> Price:Rs {{p.offerPrice}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<app-footer></app-footer>

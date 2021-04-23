@@ -1,0 +1,143 @@
+<app-header></app-header>
+
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Profile</h2>
+                    <!-- <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"></a></li>
+                        <li class="breadcrumb-item active"></li>
+                    </ul> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- html code -->
+
+  <div id="page-content" style="width:2000px;align-items:center;margin-left: 80px;">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-xl-12 col-md-12">
+                <div class="card user-card-full">
+                    <div class="row m-l-0 m-r-0">
+                        <div class="col-sm-4 bg-c-lite-green user-profile">
+                            <div class="card-block text-center text-white">
+                               
+                                <div class="m-b-25" > <img src="../../assets/Image/{{user.image}}" height="200" width="200" class="img-radius" alt="User-Profile-Image"> </div>
+                                <h6 class="f-w-600"> {{user.name}}  </h6>
+                                <div><h6><a  [routerLink]="['/updateuser',user.id]"><i class="far fa-edit "></i></a></h6></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-block">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Email</p>
+                                        <h6 class="text-muted f-w-400">{{user.emailId}}</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Phone</p>
+                                        <h6 class="text-muted f-w-400">{{user.phoneNumber}}</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Address</p>
+                                        <h6 class="text-muted f-w-400">{{user.address}}</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">City</p>
+                                        <h6 class="text-muted f-w-400">{{user.city}}</h6>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">State</p>
+                                        <h6 class="text-muted f-w-400">{{user.state}}  Pincode:{{user.pincode}}</h6>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+
+
+                                
+                                </div>
+  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="page-content" style="width:2000px;align-items:center;margin-left: 80px;">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-xl-12 col-md-12">
+                <div class="card user-card-full">
+                    <div class="row m-l-0 m-r-0">
+                      
+                        <div class="col-sm-12">
+                            <div class="card-block">
+                       
+                               
+                                <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Order Details</h6>
+                                <div class="row">
+
+                                    <h4 class="text-danger text-center" style="margin-left: 200px;">{{msg}} </h4>
+<div class="container" *ngIf = "length!=0">
+    
+    <table class="table " style=" color:blue; margin:20px; border: 1px soli black;">
+      <thead>
+        <tr>
+          <th>Order ID </th>
+          <th>User Name</th>
+          <th>Phone Number</th>
+          <th>Address</th>
+          <th>Product Name</th>
+          <th>Product Price</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
+          <th>Order Date</th>
+          <th>Order Status</th>
+          <th style="text-align:center">Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of orderDetails">
+          <td>{{s.orderId}}</td>
+          <td>{{s.userName}}</td>
+          <td>{{s.phoneno}}</td>
+          <td>{{s.address}}</td>
+          <td>{{product[s.productId-1].prodName}}</td>
+          <td>{{product[s.productId-1].offerPrice}}</td>
+          <td>{{s.quantity}}</td>
+          <td>{{s.quantity*product[s.productId-1].offerPrice}}</td>
+          <td>{{s.orderDate}}</td>
+          <td>{{s.status}}</td>
+          <td><img src="../../assets/Image/{{product[s.productId-1].image}}" height="100" width="100">        </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+                                
+                                </div>
+  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>
+
+

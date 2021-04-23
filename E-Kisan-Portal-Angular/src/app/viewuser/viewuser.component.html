@@ -1,0 +1,50 @@
+<div class="container bootdey">
+    <div style="width: 100%; height: 71px;">
+        <h1 class="text-center" style="padding-top: 20px;color: #b0b435;"><u>User Details </u></h1>
+    </div>
+    <div class="col-md-12">
+        <section class="panel">
+            <div class="panel-body">
+                <div class="col-md-6">
+                    <div class="pro-img-details">
+                        <img src="../../assets/Image/{{user.image}}" alt="{{user.image}}" class="image img-thumbnail">
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group" style="margin-top: 20px;">
+                        <label>Name : </label>
+                        {{user.name}} <br>
+                        <label>Email Id : </label>
+                        {{user.emailId}} <br>
+                        <label>Adhar Number: </label>
+                        {{user.adharNumber}} <br>
+                        <label>Mobile Number: </label>
+                        {{user.phoneNumber}} <br>
+                        <label>Date Of Birth :</label>
+                        {{user.dob}}<br>
+                        <label>Address : </label>
+                        {{user.address}}<br>
+                        <label>State :</label>
+                        {{user.state}} <br>
+                        <label>City :</label>
+                        {{user.city}} <br>
+                        <label>Country :</label>
+                        {{user.country}} <br>
+                        <label>Password :</label>
+                        {{user.password}} <br>
+                        <label>Role ID :</label>
+                        {{user.roleId}} <br>
+                        <label>Status :</label>
+                        {{user.status}} <br>
+                    </div>
+                    <p>
+                        <!-- <button class="btn btn-round btn-danger" type="button">Back</button> -->
+                        <button type="submit" [routerLink]="['/userdashboard']" class="btn btn-lg btn-block"
+                            style="color: white; background-color: black; border-radius: 0px;">Back</button>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

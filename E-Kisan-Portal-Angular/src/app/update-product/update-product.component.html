@@ -1,0 +1,147 @@
+
+<div style="width: 100%; height: 71px; background-color:black; ">
+    <h1 class="text-center" style="padding-top: 20px;color: #b0b435;">Update Product</h1>
+  </div> 
+
+
+<div class="cart-box-main">
+    <div class="container">
+        <div class="row">
+            <form class="needs-validation" novalidate [formGroup]="form">
+                <div class="mb-3">
+                        <label for="categoryId" class="name">Category Id *</label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" formControlName="categoryId" placeholder="Enter Category Id" required>
+                            <div class="invalid-feedback" style="width: 100%;"> Your category id is required. </div>
+                        </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="prodName" class="name">Product Name *</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" formControlName="prodName" placeholder="Enter Product Name" required>
+                        <div class="invalid-feedback" style="width: 100%;"> Your product name is required. </div>
+                    </div>
+                </div>
+
+
+                <div class="mb-3" >
+                    <label for="prodBrand" class="name">Product Brand *</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" formControlName="prodBrand" placeholder="Enter Product Brand" required>
+                        <div class="invalid-feedback" style="width: 100%;"> Your product brand is required. </div>
+                    </div>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="quantity" class="name">Quantity *</label>
+                    <div class="input-group">
+                    <input type="number" class="form-control" formControlName="quantity" placeholder="Enter Quantity" required>
+                    <div class="invalid-feedback"> Please enter your quantity. </div>
+                   </div>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="sizePack" class="name">Size Of Packet *</label>
+                    <div class="input-group">
+                    <input type="number" class="form-control" formControlName="sizePack" placeholder="Enter the Size" required>
+                    <div class="invalid-feedback"> Please enter size of packet. </div>
+                    </div>
+               </div>
+
+
+            <div class="mb-3">
+                <label for="expDate" class="name">Expiry Date *</label>
+                <div class="input-group">
+                <input type="text" class="form-control" formControlName="expDate" placeholder="Enter the Expiry date" required>
+                <div class="invalid-feedback"> Please enter Expiry date. </div>
+               </div>
+            </div>
+
+
+            <div class="col-md-5 mb-3">
+                <label for="price" class="name" style="margin-left:-5;">Price *</label>
+                <div class="input-group">
+                <input type="number" class="form-control " style="margin-left: -12px" formControlName="price" placeholder="Enter the price" required>
+                <div class="invalid-feedback"> Please enter the price. </div>
+            </div>
+         </div>
+
+         <div class="col-md-5 mb-3">
+            <label for="offerPrice" class="name">Offer Price *</label>
+            <div class="input-group">
+            <input type="number" class="form-control" formControlName="offerPrice" placeholder="Enter the Offer price" required>
+            <div class="invalid-feedback"> Please provide a offer price. </div>
+            </div>
+        </div>
+
+        
+        <div class="mb-3">
+            <label for="organic" class="name">Organic *</label>
+            <div class="input-group">
+            <input type="text" class="form-control" formControlName="organic" placeholder="Enter organic " required>
+            <div class="invalid-feedback"> Please enter organic. </div>
+        </div>
+        </div>
+
+
+         <div class="mb-3">
+                <label for="color" class="name">Color *</label>
+                <div class="input-group">
+                <input type="text" class="form-control" formControlName="color" placeholder="Enter Color " required>
+                <div class="invalid-feedback"> Please enter Color. </div>
+            </div>
+        </div>
+
+
+        
+        <div class="mb-3">
+            <label for="stateOrigin" class="name">State Of Origin *</label>
+            <div class="input-group">
+            <input type="text" class="form-control" formControlName="stateOrigin" placeholder="Enter State of Origin" required>
+            <div class="invalid-feedback"> Please enter State of Origin. </div>
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="powerSource" class="name">Power Source *</label>
+            <div class="input-group">
+            <input type="text" class="form-control" formControlName="powerSource" placeholder="Enter power Source" required>
+            <div class="invalid-feedback"> Please enter power Source. </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="prodDescription" class="name">Poduct Description *</label>
+            <div class="input-group">
+            <textarea type="text" class="form-control" formControlName="prodDescription" placeholder="Enter Product description" required></textarea>
+            <div class="invalid-feedback"> Please enter product description. </div>
+            </div>
+        </div>
+
+
+        
+        <div class="mb-3">
+            <label for="image" class="name">Product Image *</label>
+            <div class="input-group">
+           <input type="file" id="image" name="image" formControlName="image" class="form-control" (change)="onFileChanged($event)">
+         <div class="invalid-feedback"> Please enter product description. </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <button class="form-control" style="margin-left: 200px ; padding: 20px;" type="submit"  (click)="update()" class="btn btn-lg btn-success button">Update Product</button>
+    <button class="form-control" style="margin-left: 200px ; padding: 20px;" type="reset" class="btn btn-lg btn-danger button">Clear</button>
+    <a class="form-control" style="margin-left: 200px ; padding: 20px;" href="" class="btn btn-lg btn-info button" [routerLink]="['/productdashboard']">Back</a>
+
+    <br>
+    <br>
+    <br>
+            </form>
+        </div>
+    </div>
+</div>    

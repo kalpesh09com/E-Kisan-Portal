@@ -1,0 +1,71 @@
+<app-header></app-header>
+
+
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Login Here</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+
+<div class="contact-box-main">
+    <div class="container-fluid" style="margin-left: 450px;">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12">
+                <div class="contact-form-right">
+
+                    <form id="contactForm" [formGroup]="userForm" (ngSubmit)="register()">
+  
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <label><b> Phone Number </b></label>
+                                    <input type="text" class="form-control" id="phone" name="phone"
+                                        placeholder="Enter Phone Number" maxlength="10"
+                                         formControlName="phoneNumber" required>
+                                        <span class="error" *ngIf = "userForm.get('phoneNumber').invalid && userForm.get('phoneNumber').touched">Phone Number is required</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <label> <b>Enter Password </b></label>
+                                    <input type="password" placeholder="Enter Password" id="pass" class="form-control"
+                                        name="pass" formControlName="password" required>
+
+                                        <span class="error" *ngIf = "userForm.get('password').invalid && userForm.get('password').touched">please enter password</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success btn-lg btn-lg">Login</button>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <b>
+                                        <p>New User ? <a  routerLink="/register">SignUp</a></p>
+                                    </b>
+                                    <b>
+                                        <p>Forgot Password ? <a routerLink="/forgotpass">Forgot Password</a></p>
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<app-footer></app-footer>

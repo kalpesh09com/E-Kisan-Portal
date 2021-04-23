@@ -1,0 +1,171 @@
+<!-- 
+
+<div class="container bootdey">
+    <div style="width: 100%; height: 71px;">
+        <h1 class="text-center" style="padding-top: 30px;color:#b0b435 ;"><u>Admin Profile</u></h1>
+    </div>  
+    <div class="col-md-12">
+    <section class="panel">
+          <div class="panel-body" *ngFor="let u of user">
+              <div class="col-md-6" >
+                  <div class="pro-img-details">
+                      <img src="../../assets/Image/{{u.image}}" width="100" height="100" alt="{{u.image}}" class="image img-thumbnail">
+                  </div>
+                  
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col"> 
+                      <label>Name : </label> 
+                      <h5 class="text-muted f-w-400">{{u.name}}</h5>
+                    </div>
+                    <div class="col">
+                      <label>Email Id : </label>
+                      <h5 class="text-muted f-w-400">{{u.emailId}} </h5>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <label>Adhar Number: </label> 
+                         <h5 class="text-muted f-w-400">{{u.adharNumber}}</h5>
+                        </div>
+                        <div class="col">
+                          <label>Mobile Number: </label>
+                         <h5 class="text-muted f-w-400">{{u.phoneNumber}} </h5>
+                        </div>
+                       </div>
+
+                       <div class="row">
+                         <div class="col">
+                          <label>Date Of Birth :</label>
+                          <h5 class="text-muted f-w-400">{{u.dob}}</h5>
+
+                         </div>
+                         <div class="col">
+                          <label>Address : </label>
+                          <h5 class="text-muted f-w-400"> {{u.address}}</h5>
+
+                        </div>
+                       </div>
+                        
+                       <div class="row">
+                        <div class="col">
+                          <label>State :</label>
+                         <h5 class="text-muted f-w-400">{{u.state}}</h5> 
+
+                        </div>
+                        <div class="col">
+                          <label>City :</label>
+                          <h5 class="text-muted f-w-400">{{u.city}}</h5>
+
+                       </div>
+                      </div>
+
+
+                      <div class="row">
+                        <div class="col">
+                          <label>Country :</label>
+                         <h5 class="text-muted f-w-400">{{u.country}}</h5> 
+
+                        </div>
+                        <div class="col">
+                          <label>Password :</label>
+                         <h5 class="text-muted f-w-400">{{u.password}}</h5>
+
+                       </div>
+                      </div>
+
+
+
+                      <div class="row">
+                        <div class="col">
+                          <label>Role ID :</label>
+                          <h5 class="text-muted f-w-400">{{u.roleId}}</h5> 
+
+                        </div>
+                        <div class="col">
+                          <label>Status :</label>
+                         <h5 class="text-muted f-w-400">{{u.status}} </h5>
+
+                       </div>
+                      </div>
+
+                  </div> 
+                </div>
+                  <p>
+                    
+                      <button type="submit" [routerLink]="['/backtoadmindashboard']"
+                            class="btn btn-lg btn-block" style="color: white; background-color: black; border-radius: 0px;">Back</button>
+                  </p>
+              </div>
+          </div>
+      </section>
+      </div>
+      </div>
+ -->
+
+<div style="width: 100%; height: 71px;">
+  <h1 class="text-center" style="padding-top: 30px;color:#b0b435 ;"><u>Admin Profile</u></h1>
+</div>
+
+
+<div id="page-content" style="width:2000px;align-items:center;margin-left: 80px;">
+  <div class="padding">
+    <div class="row container d-flex justify-content-center">
+      <div class="col-xl-12 col-md-12">
+        <div class="card user-card-full">
+          <div class="row m-l-0 m-r-0">
+            <div class="col-sm-4 bg-c-lite-green user-profile">
+              <div class="card-block text-center text-white">
+
+                <div class="m-b-25"> <img src="../../assets/Image/{{user.image}}" height="200" width="200"
+                    class="img-radius" alt="User-Profile-Image"> </div>
+                <h6 class="f-w-600"> {{user.name}} </h6>
+                <div>
+                  <h6><a [routerLink]="['/updateuser',user.id]"><i class="far fa-edit "></i></a></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="card-block">
+                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">Email</p>
+                    <h6 class="text-muted f-w-400">{{user.emailId}}</h6>
+                  </div>
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">Phone</p>
+                    <h6 class="text-muted f-w-400">{{user.phoneNumber}}</h6>
+                  </div>
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">Address</p>
+                    <h6 class="text-muted f-w-400">{{user.address}}</h6>
+                  </div>
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">City</p>
+                    <h6 class="text-muted f-w-400">{{user.city}}</h6>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">State</p>
+                    <h6 class="text-muted f-w-400">{{user.state}} Pincode:{{user.pincode}}</h6>
+                  </div>
+
+                </div>
+                <div class="row">
+
+                  <button type="submit" [routerLink]="['/adminportal']" class="btn btn-lg btn-block"
+                    style="color: white; background-color: black; border-radius: 0px;">Back</button>
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

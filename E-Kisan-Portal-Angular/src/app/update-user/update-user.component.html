@@ -1,0 +1,166 @@
+<app-header></app-header>
+
+
+<div style="width: 100%; height: 71px;">
+    <h1 class="text-center" style="padding-top: 40px;color: #b0b435;"><u>Update User Details </u></h1>
+</div> 
+
+<div class="cart-box-main">
+<div class="container">
+    <div class="row">
+        <form class="needs-validation" novalidate [formGroup]="form">
+            <div class="mb-3">
+                    <label for="name" class="name">Name *</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" formControlName="name" placeholder="Enter your name" required>
+                        <div class="invalid-feedback" style="width: 100%;"> Your name is required. </div>
+                    </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="emailId" class="name">Email ID *</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" formControlName="emailId" placeholder="Enter your Email " required>
+                    <div class="invalid-feedback" style="width: 100%;"> Your email id is required. </div>
+                </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="phoneNumber" class="name">Mobile Number *</label>
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="phoneNumber" placeholder="Enter your mobile number " required>
+                <div class="invalid-feedback" style="width: 100%;"> Your mobile number is required. </div>
+            </div>
+        </div>
+        
+
+        <div class="mb-3">
+            <label for="address" class="name">Address *</label>
+            <div class="input-group">
+                <input type="text" class="form-control" formControlName="address" placeholder="Enter your Address " required>
+                <div class="invalid-feedback" style="width: 100%;"> Your address is required. </div>
+            </div>
+        </div>
+
+
+        
+        <div class="mb-3">
+            <label for="pincode" class="name">Pincode *</label>
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="pincode" placeholder="Enter your Pincode" required>
+                <div class="invalid-feedback" style="width: 100%;"> Your pincode is required. </div>
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="state" class="name">State *</label>
+            <div class="input-group">
+                <input type="text" class="form-control" formControlName="state" placeholder="Enter your State" required>
+                <div class="invalid-feedback" style="width: 100%;"> Your state is required. </div>
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="city" class="name">City *</label>
+            <div class="input-group">
+                <input type="text" class="form-control" formControlName="city" placeholder="Enter your City" required>
+                <div class="invalid-feedback" style="width: 100%;"> Your city is required. </div>
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="country" class="name">Country *</label>
+            <div class="input-group">
+                <input type="text" class="form-control" formControlName="country" placeholder="Enter your Country" required>
+                <div class="invalid-feedback" style="width: 100%;"> Your Country is required. </div>
+            </div>
+        </div>
+
+        
+        <div class="mb-3">
+            <label for="adharNumber" class="name">Adhar Number *</label>
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="adharNumber" placeholder="Enter your Adhar number" required>
+                <div class="invalid-feedback" style="width: 100%;"> Your adhar number is required. </div>
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="dob" class="name">DOB *</label>
+            <div class="input-group">
+                <input type="date" class="form-control" formControlName="dob" placeholder="Enter your Date of birth" required>
+                <div class="invalid-feedback" style="width: 100%;"> Your adhar number is required. </div>
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="password" class="name">Password *</label>
+            <div class="input-group">
+                <input type="password" class="form-control" formControlName="password" placeholder="Enter your Password" required>
+                <div class="invalid-feedback" style="width: 100%;"> Your password is required. </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="mb-3">
+            <label for="roleId" class="name">Role ID *</label>
+            <div class="input-group">
+                <input type="text" class="form-control" formControlName="roleId" placeholder="Enter your Role ID" required>
+                <div class="invalid-feedback" style="width: 100%;"> Your Role ID is required. </div>
+            </div>
+        </div> -->
+
+
+<!-- 
+        <div class="mb-3">
+            <label for="status" class="name">Status *</label>
+            <div class="input-group">
+                <input type="text" class="form-control" formControlName="status" placeholder="Enter your status" required>
+                <div class="invalid-feedback" style="width: 100%;"> Your Status is required. </div>
+            </div>
+        </div> -->
+
+            <div class="mb-3">
+                <label for="image" class="name">Image*</label>
+                <div class="input-group">
+                    <input type="file" id="image" name="image" class="form-control" formControlName="image" placeholder="Enter Your image"  (change)="onFileChanged($event)" required>
+                    <div class="invalid-feedback" style="width: 100%;"> Your image is required. </div>
+                </div>
+            </div>
+
+
+
+    
+   
+<br>
+<br>
+
+<button class="form-control" type="submit"  (click)="update()"class="btn btn-lg btn-success button">Update User</button>
+<button class="form-control"  type="reset" class="btn btn-lg btn-danger button">Clear</button>
+<button *ngIf="length!=2" class="form-control"  href="" class="btn btn-lg btn-info button"  [routerLink]="['/userprofile']">Back to user-profile</button> 
+
+<br>
+<br>
+<br>
+        </form>
+    </div>
+<!-- <div class="container" *ngIf="length==2">
+    <button  type="submit" [routerLink]="['/userdashboard']" class="btn btn-block" 
+style="color: white; background-color: black;">Back</button></div> -->
+<div class="container" *ngIf="length==2">
+    <button  type="submit" [routerLink]="['/userdashboard']" class="btn btn-block" 
+        style="color: white; background-color: black;">Back</button></div>
+</div>
+</div>    
+
+
+
+
+
+<app-footer></app-footer>

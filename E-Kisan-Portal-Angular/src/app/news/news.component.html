@@ -1,0 +1,55 @@
+<app-header></app-header>
+
+
+<div class="form-group">
+    <input type="text" class="form-control" style="margin-left:400px;margin-top:30px;width:500px;" placeholder="Search Here" [(ngModel)]="term">
+</div>
+
+
+<div class="container mt-5">
+
+    <div class="row">
+
+        <div *ngFor="let d of topheadingdispaly| filter:term " class="col-lg-4 mt-4 mb-4">
+
+            <div class="box">
+
+                <img src="{{d.urlToImage}}" width="100%">
+                <h5 class="mt-3 mb-3">{{d.title}}</h5>
+                <p>{{d.description}}</p>
+     
+                <a href="{{d.url}}" target="-blank" class="btn btn-dark btn-sm mt-2">Read More</a>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <h1 style="text-align: center;">Websites</h1>
+<div>
+<table class="table table-striped">
+    <tbody><tr><th>Agriculture Websites</th><th>URL</th></tr>
+    <tr><td>Department of Agriculture, Cooperation and Farmers Welfare</td><td><a href="http://agricoop.nic.in/" target="_blank">http://agricoop.nic.in/</a></td></tr>
+    <tr><td>For Indian Agriculture College/Universities News</td><td><a href="http://agricollegenews.com/" target="_blank">http://agricollegenews.com/ </a></td></tr>
+    <tr><td>Agricultural and Processed Food Export Development Authority</td><td><a href="http://apeda.in/apedawebsite/" target="_blank">http://www.apeda.in</a></td></tr>
+    <tr><td>UpAgriculture.org</td><td><a href="http://www.upagriculture.org/" target="_blank">http://www.upagriculture.org/</a></td></tr>
+    <tr><td>For Agriculture Insurance</td><td><a href="http://agriinsurance.com/" target="_blank">http://agriinsurance.com/</a></td></tr>                            
+    <tr><td>For AgTech News</td><td><a href="http://agtechnews.com/" target="_blank">http://agtechnews.com/ </a></td></tr>
+    <tr><td>Ministry of Rural Development</td><td><a href="http://rural.nic.in" target="_blank">http://rural.nic.in</a></td></tr>
+    <tr><td>For Indian Agriculture Retailers</td><td><a href="http://agriretailers.com/" target="_blank">http://agriretailers.com/</a></td></tr>
+    <tr><td>Indian Society of Agribusiness Professionals</td><td><a href="http://www.isapindia.org/isap/" target="_blank">http://www.isapindia.org/isap/</a></td></tr>
+    <tr><td>Farmers’ Portal</td><td><a href="http://farmer.gov.in/" target="_blank">http://farmer.gov.in/</a></td></tr>
+    <tr><td>For Tractor News, Tractor Loans, Tractor Insurance</td><td><a href="http://tractorbuyersguide.in/" target="_blank">http://tractorbuyersguide.in/</a></td></tr>
+    <tr><td>For Agriculture Jobs</td><td><a href="http://www.indiaagrijobs.com/" target="_blank">http://www.indiaagrijobs.com/</a></td></tr>
+    <tr><td>india.gov.in National Portal of India</td><td><a href="http://india.gov.in/topics/agriculture" target="_blank">http://india.gov.in/topics/agriculture</a></td></tr>
+    <tr><td>mKisan (Help through mobile messaging for farmers)</td><td><a href="http://mkisan.gov.in/" target="_blank">http://mkisan.gov.in/</a></td></tr>
+    </tbody>
+</table>
+</div>
+
+
+<app-footer></app-footer>

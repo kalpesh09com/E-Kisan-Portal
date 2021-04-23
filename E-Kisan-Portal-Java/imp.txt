@@ -1,0 +1,60 @@
+Must follow following rules while working on Project
+
+	1.Class name must start with capital letter and then camel case  (Product).
+	2.All attributes name must start with small lettes and then camel case (pid , pName, pPrice).
+	3.use auto generate source code for getters , setters , toString method and both constructors.
+	4.All user defined functions name must start with samll letters and then camel case (public void addProduct(Product p){}).
+	5.use meaning full names for all the functions and attributes and don't use (_) in any function or attribute name.
+	6.use meaningfull names to every mapping for request like (for saving data /addProduct ,  foe  fatching data /getProduct etc..
+	
+	
+	
+	
+updated queries
+
+
+ create table user(Id int primary key NOT NULL AUTO_INCREMENT , Name varchar(200), Email_ID varchar(200), Phone_Number varchar(200),Address varchar(200), Pincode double , State varchar(200), City varchar(200),Adhar_Number varchar(200),DOB date , Password varchar(200), Country varchar(200), Role_Id int , Status varchar(200));
+ 
+ 
+ 
+ json data
+ 
+ 
+ [
+    {
+        "id": 1,
+        "name": "Sumit",
+        "emailId": "s@gmail.com",
+        "phoneNumber": "8007463731",
+        "address": "Akot",
+        "pincode": 444117,
+        "state": "Maharashtra",
+        "city": "Akola",
+        "adharNumber": "686888713870",
+        "dob": "1996-06-07",
+        "password": "552618",
+        "country": "India",
+        "roleId": 1,
+        "status": "Active"
+    }
+]
+
+
+[
+{
+    "name": "Omkar",
+    "emailId": "o@gmail.com",
+    "phoneNumber": "8887463731",
+    "address": "Pune",
+    "pincode": 444117,
+    "state": "Maharashtra",
+    "city": "Pune",
+    "adharNumber": "777788713870",
+    "dob": "1997-06-07",
+    "password": "12345",
+    "country": "India",
+    "roleId": 2,
+    "status": "Active"
+}
+
+]
